@@ -422,7 +422,7 @@ window.QUESTIONS = [
 
   {
     id: 25,
-    subspecialty: "Metabolic",
+    subspecialty: "Metabolic Bone Disease",
     questionType: "Diagnosis",
     stem: "A 54-year-old woman with severe rheumatoid arthritis has been on prednisolone 10 mg/day for 3 years. She presents with acute thoracic back pain after a minor lifting incident. Radiographs confirm a T8 vertebral compression fracture. DEXA scan shows T-score of −2.8 at the lumbar spine. Her serum calcium, phosphate, 25-OH vitamin D, and PTH are all within normal limits.\n\nWhich statement MOST accurately describes the pathophysiology of her bone loss?",
     choices: {
@@ -438,7 +438,7 @@ window.QUESTIONS = [
 
   {
     id: 26,
-    subspecialty: "Metabolic",
+    subspecialty: "Metabolic Bone Disease",
     questionType: "Management",
     stem: "A 66-year-old woman on alendronate for 9 years presents with 3 months of dull aching right thigh pain with no history of trauma. AP radiograph of the right femur is shown. Lateral cortical thickening ('beaking') is seen at the subtrochanteric region with a transverse incomplete fracture line. The left femur radiograph is normal.\n\nWhich management strategy is most appropriate?",
     imageFile: "q26_aff.svg",
@@ -456,7 +456,7 @@ window.QUESTIONS = [
 
   {
     id: 27,
-    subspecialty: "Metabolic",
+    subspecialty: "Metabolic Bone Disease",
     questionType: "Investigation",
     stem: "A 45-year-old male presents with diffuse bone pain, proximal muscle weakness, and difficulty walking. Pelvic radiographs show bilateral Looser zones (pseudofractures) in the medial femoral necks. He has had no sun exposure for years and has a nutritionally deficient diet.\n\nWhich laboratory pattern is most consistent with nutritional vitamin D deficiency osteomalacia?",
     choices: {
