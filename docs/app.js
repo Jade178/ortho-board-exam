@@ -6,6 +6,8 @@ const SUBSPECIALTIES = [
   "Metabolic Bone Disease", "Basic Science"
 ];
 
+const EXAM_VERSION = 2;
+
 const State = {
   questions: [],
   currentIndex: 0,
@@ -18,16 +20,18 @@ const State = {
 // ── Persistence ──────────────────────────────────────────────────────────────
 
 function persist() {
-  try { sessionStorage.setItem("orthoExam", JSON.stringify(State)); } catch(e) {}
+  try { sessionStorage.setItem("orthoExam", JSON.stringify({...State, v: EXAM_VERSION})); } catch(e) {}
 }
 
 function restore() {
   try {
     const raw = sessionStorage.getItem("orthoExam");
     if (!raw) return false;
-    Object.assign(State, JSON.parse(raw));
+    const data = JSON.parse(raw);
+    if (data.v !== EXAM_VERSION) { sessionStorage.removeItem("orthoExam"); return false; }
+    Object.assign(State, data);
     return true;
-  } catch(e) { return false; }
+  } catch(e) { sessionStorage.removeItem("orthoExam"); return false; }
 }
 
 // ── Shuffle ──────────────────────────────────────────────────────────────────
@@ -203,7 +207,7 @@ function renderNav(index, total, answered) {
     <button class="nav-btn" id="btn-prev" ${index === 0 ? 'disabled' : ''}>◀ Prev</button>
     <span class="nav-counter">${answered} / ${total} answered</span>
     <button class="nav-btn" id="btn-next" ${index === total - 1 ? 'disabled' : ''}>Next ▶</button>
-    ${allAnswered ? `<button class="btn-submit" id="btn-submit">Submit</button>` : ''}
+    <button class="btn-submit${allAnswered ? '' : ' btn-submit-partial'}" id="btn-submit">Submit</button>
   `;
 
   document.getElementById('btn-prev')?.addEventListener('click', () => {
@@ -279,6 +283,7 @@ function calcResults() {
   let total = 0;
 
   State.questions.forEach(q => {
+    if (!bySubspecialty[q.subspecialty]) bySubspecialty[q.subspecialty] = { correct: 0, total: 0 };
     bySubspecialty[q.subspecialty].total++;
     if (State.answers[q.id] === q.correct) {
       bySubspecialty[q.subspecialty].correct++;

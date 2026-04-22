@@ -354,6 +354,8 @@ body {
 }
 
 .btn-submit:hover { background: var(--accent); }
+.btn-submit-partial { background: #5d7a9a; }
+.btn-submit-partial:hover { background: var(--primary); }
 
 /* ── CONFIRM SCREEN ── */
 #screen-confirm {
