@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 380" style="background:#111111">
+  <text x="240" y="26" text-anchor="middle" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold">AP Knee — Tibial Plateau Fracture</text>
+
+  <!-- Distal femur -->
+  <path d="M155 40 L155 160 Q155 185 175 198 Q200 210 240 210 Q280 210 305 198 Q325 185 325 160 L325 40" fill="#2a2a2a" stroke="#c8c8c8" stroke-width="2.5"/>
+  <!-- Medial condyle -->
+  <ellipse cx="185" cy="200" rx="28" ry="18" fill="#333" stroke="#c0c0c0" stroke-width="1.5"/>
+  <!-- Lateral condyle -->
+  <ellipse cx="295" cy="198" rx="28" ry="18" fill="#333" stroke="#c0c0c0" stroke-width="1.5"/>
+
+  <!-- Joint space -->
+  <line x1="155" y1="225" x2="325" y2="225" stroke="#555" stroke-width="2"/>
+
+  <!-- TIBIAL PLATEAU — Schatzker VI: bicondylar + metaphyseal-diaphyseal dissociation -->
+  <!-- Proximal tibia with fracture -->
+  <!-- Medial plateau (depressed/split) -->
+  <path d="M160 235 Q165 232 185 230 Q195 228 205 232 L210 245 Q200 252 185 255 Q170 258 160 255 Z" fill="#2a2a2a" stroke="#c0c0c0" stroke-width="2"/>
+  <!-- Lateral plateau (depressed) -->
+  <path d="M270 232 Q285 228 305 230 Q318 232 322 235 L322 255 Q310 258 295 256 Q278 254 270 248 Z" fill="#2a2a2a" stroke="#c0c0c0" stroke-width="2"/>
+
+  <!-- Intercondylar eminence (partially visible) -->
+  <path d="M208 228 Q225 215 242 215 Q258 215 275 228" fill="none" stroke="#aaa" stroke-width="1.5"/>
+
+  <!-- FRACTURE LINES — Schatzker VI pattern -->
+  <!-- Lateral split/depression line -->
+  <line x1="270" y1="245" x2="285" y2="260" stroke="#ffffff" stroke-width="2.5"/>
+  <!-- Medial split line -->
+  <line x1="210" y1="245" x2="198" y2="262" stroke="#ffffff" stroke-width="2.5"/>
+  <!-- Horizontal metaphyseal fracture line -->
+  <line x1="175" y1="268" x2="310" y2="268" stroke="#ffffff" stroke-width="2.5"/>
+  <!-- Oblique lines to shaft -->
+  <line x1="175" y1="268" x2="185" y2="310" stroke="#ffffff" stroke-width="2.5"/>
+  <line x1="310" y1="268" x2="298" y2="310" stroke="#ffffff" stroke-width="2.5"/>
+
+  <!-- Tibial shaft (comminuted middle portion) -->
+  <path d="M185 310 L180 370 L300 370 L298 310 Z" fill="#2a2a2a" stroke="#c0c0c0" stroke-width="2"/>
+  <!-- Central comminution zone shading -->
+  <path d="M190 268 L195 310 Q240 318 285 310 L290 268 Q240 272 190 268Z" fill="#1a1a1a" stroke="#aaa" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Fibula head -->
+  <ellipse cx="340" cy="248" rx="14" ry="10" fill="#2e2e2e" stroke="#b0b0b0" stroke-width="1.5"/>
+  <rect x="334" y="258" width="12" height="110" rx="4" fill="#2a2a2a" stroke="#b0b0b0" stroke-width="1.5"/>
+
+  <!-- Schatzker label -->
+  <text x="50" y="270" fill="#ff4444" font-size="11" font-family="Arial" font-weight="bold">Schatzker VI</text>
+  <line x1="110" y1="268" x2="175" y2="268" stroke="#ff4444" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Annotation -->
+  <rect x="10" y="308" width="460" height="62" rx="5" fill="#1e1e1e" stroke="#444" stroke-width="1"/>
+  <text x="20" y="326" fill="#ffdd00" font-size="10" font-family="Arial" font-weight="bold">Schatzker VI: </text>
+  <text x="95" y="326" fill="#cccccc" font-size="10" font-family="Arial">Bicondylar fracture with complete metaphyseal-diaphyseal dissociation</text>
+  <text x="20" y="342" fill="#cccccc" font-size="10" font-family="Arial">Significant soft tissue injury — spanning external fixator first, then ORIF</text>
+  <text x="20" y="358" fill="#ff4444" font-size="10" font-family="Arial" font-weight="bold">Initial Rx: Temporary Ex-Fix. Definitive: Dual-incision ORIF (AL + posteromedial)</text>
+</svg>

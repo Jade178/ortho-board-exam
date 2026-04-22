@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 380" style="background:#111111">
+  <!-- AP Pelvis X-ray — APC-III injury -->
+  <text x="260" y="26" text-anchor="middle" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold">AP Pelvis Radiograph</text>
+
+  <!-- Sacrum -->
+  <path d="M210 60 Q260 55 310 60 Q320 110 310 160 Q260 170 210 160 Q200 110 210 60Z" fill="#2a2a2a" stroke="#c8c8c8" stroke-width="2"/>
+  <line x1="240" y1="80" x2="240" y2="150" stroke="#999" stroke-width="1"/>
+  <line x1="260" y1="75" x2="260" y2="155" stroke="#999" stroke-width="1"/>
+  <line x1="280" y1="80" x2="280" y2="150" stroke="#999" stroke-width="1"/>
+
+  <!-- Left ilium -->
+  <path d="M210 100 Q180 60 140 55 Q115 70 110 110 Q120 155 150 175 Q175 185 210 175Z" fill="#2a2a2a" stroke="#c8c8c8" stroke-width="2"/>
+  <!-- Right ilium -->
+  <path d="M310 100 Q340 60 380 55 Q405 70 410 110 Q400 155 370 175 Q345 185 310 175Z" fill="#2a2a2a" stroke="#c8c8c8" stroke-width="2"/>
+
+  <!-- Left SI joint — normal -->
+  <path d="M210 95 Q215 115 213 145" fill="none" stroke="#bbbbbb" stroke-width="1.5"/>
+  <!-- Right SI joint — WIDENED (APC-III) -->
+  <path d="M310 95 Q305 115 307 145" fill="none" stroke="#ff4444" stroke-width="2.5" stroke-dasharray="5,2"/>
+  <path d="M318 95 Q315 115 316 145" fill="none" stroke="#ff4444" stroke-width="2.5" stroke-dasharray="5,2"/>
+
+  <!-- Left acetabulum + femoral head -->
+  <ellipse cx="155" cy="210" rx="32" ry="30" fill="#1e1e1e" stroke="#c0c0c0" stroke-width="2"/>
+  <circle cx="155" cy="218" r="22" fill="#333" stroke="#b0b0b0" stroke-width="1.5"/>
+  <!-- Right acetabulum + femoral head -->
+  <ellipse cx="365" cy="210" rx="32" ry="30" fill="#1e1e1e" stroke="#c0c0c0" stroke-width="2"/>
+  <circle cx="365" cy="218" r="22" fill="#333" stroke="#b0b0b0" stroke-width="1.5"/>
+
+  <!-- Left pubic ramus -->
+  <path d="M148 235 Q180 250 215 255" fill="none" stroke="#c0c0c0" stroke-width="2"/>
+  <path d="M148 242 Q180 258 215 262" fill="none" stroke="#c0c0c0" stroke-width="1.5"/>
+  <!-- Right pubic ramus -->
+  <path d="M372 235 Q340 250 305 255" fill="none" stroke="#c0c0c0" stroke-width="2"/>
+  <path d="M372 242 Q340 258 305 262" fill="none" stroke="#c0c0c0" stroke-width="1.5"/>
+
+  <!-- Symphysis gap — WIDENED (>2.5 cm equivalent) -->
+  <line x1="215" y1="252" x2="305" y2="252" stroke="#333" stroke-width="18"/>
+  <line x1="215" y1="245" x2="215" y2="270" stroke="#ff4444" stroke-width="2"/>
+  <line x1="305" y1="245" x2="305" y2="270" stroke="#ff4444" stroke-width="2"/>
+  <line x1="215" y1="258" x2="305" y2="258" stroke="#ff4444" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="260" y="282" text-anchor="middle" fill="#ff4444" font-size="10" font-family="Arial" font-weight="bold">Symphysis diastasis &gt;3 cm</text>
+
+  <!-- Arrow pointing to SI widening -->
+  <line x1="414" y1="120" x2="320" y2="120" stroke="#ff4444" stroke-width="1.5" marker-end="url(#arrowR)"/>
+  <text x="418" y="116" fill="#ff4444" font-size="9" font-family="Arial">SI joint</text>
+  <text x="418" y="128" fill="#ff4444" font-size="9" font-family="Arial">widening</text>
+
+  <defs>
+    <marker id="arrowR" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+      <path d="M6,0 L0,3 L6,6 Z" fill="#ff4444"/>
+    </marker>
+  </defs>
+
+  <!-- Annotation box -->
+  <rect x="10" y="310" width="500" height="60" rx="5" fill="#1e1e1e" stroke="#444" stroke-width="1"/>
+  <text x="20" y="328" fill="#ffdd00" font-size="10" font-family="Arial" font-weight="bold">Findings: </text>
+  <text x="75" y="328" fill="#cccccc" font-size="10" font-family="Arial">Pubic symphysis diastasis &gt;2.5 cm</text>
+  <text x="20" y="344" fill="#ffdd00" font-size="10" font-family="Arial" font-weight="bold">           </text>
+  <text x="20" y="344" fill="#cccccc" font-size="10" font-family="Arial">Right SI joint widening (complete posterior ligament disruption)</text>
+  <text x="20" y="360" fill="#cccccc" font-size="10" font-family="Arial">Hemodynamically unstable — APC-III (Tile C) pelvic ring injury</text>
+</svg>

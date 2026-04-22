@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440" style="background:#111111">
+  <text x="220" y="26" text-anchor="middle" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold">AP Pelvis — Slipped Capital Femoral Epiphysis (SCFE)</text>
+
+  <!-- Pelvis outline -->
+  <path d="M60 120 Q55 80 100 65 Q160 50 220 52 Q280 50 340 65 Q385 80 380 120 Q375 160 340 175 Q300 185 270 180 L220 178 L170 180 Q140 185 100 175 Q65 160 60 120Z" fill="#2a2a2a" stroke="#c0c0c0" stroke-width="2"/>
+
+  <!-- Sacrum -->
+  <path d="M190 145 Q220 135 250 145 L255 190 Q220 200 185 190 Z" fill="#333" stroke="#b0b0b0" stroke-width="1.5"/>
+
+  <!-- LEFT HIP — Normal -->
+  <!-- Left acetabulum -->
+  <path d="M98 168 Q110 145 135 140 Q160 137 172 155 Q182 170 178 190 Q168 208 145 210 Q120 210 108 195 Q95 182 98 168Z" fill="#222" stroke="#c0c0c0" stroke-width="2"/>
+  <!-- Left femoral head (normal, centered) -->
+  <circle cx="140" cy="178" r="24" fill="#2e2e2e" stroke="#c8c8c8" stroke-width="2"/>
+  <!-- Left physis (normal, thin horizontal) -->
+  <path d="M118 178 Q140 175 162 178" fill="none" stroke="#ffdd00" stroke-width="2"/>
+  <!-- Left femoral neck + shaft -->
+  <path d="M140 202 L128 235 L118 280 L115 340 L132 342 L140 280 L150 235 L160 202 Z" fill="#2a2a2a" stroke="#c0c0c0" stroke-width="2"/>
+  <!-- LEFT Klein's line — NORMAL (intersects head) -->
+  <line x1="90" y1="154" x2="165" y2="154" stroke="#00ff88" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="60" y="151" fill="#00ff88" font-size="8" font-family="Arial" font-weight="bold">Klein's</text>
+  <text x="60" y="162" fill="#00ff88" font-size="8" font-family="Arial" font-weight="bold">line ✓</text>
+
+  <!-- RIGHT HIP — SCFE (posterior slip) -->
+  <!-- Right acetabulum -->
+  <path d="M262 168 Q274 145 300 140 Q325 137 337 155 Q347 170 342 190 Q332 208 308 210 Q282 210 270 195 Q257 182 262 168Z" fill="#222" stroke="#c0c0c0" stroke-width="2"/>
+  <!-- Right femoral head — slipped inferiorly/medially (posterior slip) -->
+  <circle cx="295" cy="192" r="24" fill="#2e2e2e" stroke="#c8c8c8" stroke-width="2"/>
+  <!-- Right physis — widened, irregular (SCFE) -->
+  <path d="M274 180 Q296 172 318 175" fill="none" stroke="#ffdd00" stroke-width="2.5"/>
+  <!-- Physeal irregularity -->
+  <path d="M274 183 Q296 176 318 178" fill="none" stroke="#ffdd00" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <!-- Right femoral neck + shaft — neck looks longer (head slipped off) -->
+  <path d="M310 186 L322 235 L328 280 L325 340 L310 342 L308 280 L298 235 L285 202 Z" fill="#2a2a2a" stroke="#c0c0c0" stroke-width="2"/>
+  <!-- RIGHT Klein's line — does NOT intersect head (SCFE) -->
+  <line x1="255" y1="168" x2="345" y2="168" stroke="#ff4444" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="345" y="164" fill="#ff4444" font-size="8" font-family="Arial" font-weight="bold">Klein's</text>
+  <text x="345" y="175" fill="#ff4444" font-size="8" font-family="Arial" font-weight="bold">line ✗</text>
+
+  <!-- Slip angle indicator (right hip) -->
+  <line x1="300" y1="175" x2="320" y2="195" stroke="#ff8800" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="350" y="198" fill="#ff8800" font-size="9" font-family="Arial">Slip</text>
+  <text x="350" y="210" fill="#ff8800" font-size="9" font-family="Arial">angle</text>
+  <line x1="348" y1="205" x2="322" y2="195" stroke="#ff8800" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- SCFE label -->
+  <rect x="242" y="58" width="140" height="36" rx="4" fill="#1e1e1e" stroke="#ff4444" stroke-width="1.5"/>
+  <text x="312" y="74" text-anchor="middle" fill="#ff4444" font-size="9" font-family="Arial" font-weight="bold">SCFE — Right Hip</text>
+  <text x="312" y="87" text-anchor="middle" fill="#cccccc" font-size="8.5" font-family="Arial">Posterior-inferior slip, physis wide</text>
+  <line x1="290" y1="94" x2="295" y2="168" stroke="#ff4444" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Normal label -->
+  <rect x="58" y="58" width="110" height="36" rx="4" fill="#1e1e1e" stroke="#00ff88" stroke-width="1.5"/>
+  <text x="113" y="74" text-anchor="middle" fill="#00ff88" font-size="9" font-family="Arial" font-weight="bold">Left — Normal</text>
+  <text x="113" y="87" text-anchor="middle" fill="#cccccc" font-size="8.5" font-family="Arial">Klein's line intersects head</text>
+  <line x1="140" y1="94" x2="140" y2="154" stroke="#00ff88" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Annotation -->
+  <rect x="10" y="356" width="420" height="74" rx="5" fill="#1e1e1e" stroke="#444" stroke-width="1"/>
+  <text x="20" y="374" fill="#ffdd00" font-size="10" font-family="Arial" font-weight="bold">SCFE — Trethowan's Sign (Klein's Line)</text>
+  <text x="20" y="390" fill="#cccccc" font-size="10" font-family="Arial">Normal: Klein's line (along superior femoral neck) intersects ≥1/6 of head</text>
+  <text x="20" y="406" fill="#cccccc" font-size="10" font-family="Arial">SCFE: epiphysis slips posterior-inferior, head lies below Klein's line</text>
+  <text x="20" y="422" fill="#ff4444" font-size="10" font-family="Arial" font-weight="bold">→ Urgent in-situ percutaneous cannulated screw fixation</text>
+</svg>

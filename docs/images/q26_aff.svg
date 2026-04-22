@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440" style="background:#111111">
+  <text x="220" y="26" text-anchor="middle" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold">AP Femur — Atypical Femoral Fracture (AFF)</text>
+
+  <!-- Greater trochanter -->
+  <path d="M168 72 Q155 68 148 78 Q142 90 150 100 Q158 108 170 106" fill="#2a2a2a" stroke="#c0c0c0" stroke-width="2"/>
+  <!-- Lesser trochanter -->
+  <path d="M235 105 Q248 100 254 108 Q258 118 250 125 Q242 130 235 126" fill="#2a2a2a" stroke="#c0c0c0" stroke-width="1.8"/>
+
+  <!-- Femoral shaft (subtrochanteric to distal) -->
+  <!-- Medial cortex -->
+  <path d="M180 68 L178 85 L178 200 L180 340 Q182 370 200 378 Q220 385 240 378 Q258 370 260 340 L262 200 L262 85 L248 70 Z" fill="#2a2a2a" stroke="#c0c0c0" stroke-width="2"/>
+
+  <!-- Lateral cortex THICKENING at subtrochanteric level (AFF site) -->
+  <!-- Normal lateral cortex above AFF zone -->
+  <line x1="178" y1="85" x2="178" y2="135" stroke="#c0c0c0" stroke-width="2.5"/>
+  <!-- Lateral cortex thickening/beaking at AFF zone (y=135-175) -->
+  <path d="M178 135 Q165 145 162 158 Q160 170 178 175" fill="#3a3a3a" stroke="#ffdd00" stroke-width="3"/>
+  <!-- Periosteal reaction extending -->
+  <path d="M178 135 Q172 148 170 158 Q168 168 178 175" fill="none" stroke="#ffdd00" stroke-width="2" stroke-dasharray="4,2"/>
+  <!-- Normal lateral cortex below AFF zone -->
+  <line x1="178" y1="175" x2="178" y2="340" stroke="#c0c0c0" stroke-width="2.5"/>
+
+  <!-- FRACTURE LINE — transverse (AFF characteristic) -->
+  <line x1="155" y1="162" x2="263" y2="162" stroke="#ffffff" stroke-width="3"/>
+  <!-- Medial spike (medial cortex beak — thicker) -->
+  <path d="M262 162 Q270 162 272 158 Q270 154 262 155" fill="#3a3a3a" stroke="#ffdd00" stroke-width="2"/>
+  <!-- Fracture gap indication -->
+  <line x1="178" y1="158" x2="178" y2="166" stroke="#ff4444" stroke-width="2"/>
+  <line x1="262" y1="158" x2="262" y2="166" stroke="#ff4444" stroke-width="2"/>
+
+  <!-- Femoral head and neck -->
+  <circle cx="215" cy="42" r="28" fill="#2a2a2a" stroke="#c0c0c0" stroke-width="2"/>
+  <path d="M180 68 Q195 55 215 50 Q228 46 230 55 L248 70" fill="#2a2a2a" stroke="#c0c0c0" stroke-width="2"/>
+
+  <!-- Lateral cortex beaking label -->
+  <text x="50" y="140" fill="#ffdd00" font-size="9" font-family="Arial" font-weight="bold">Lateral</text>
+  <text x="50" y="152" fill="#ffdd00" font-size="9" font-family="Arial" font-weight="bold">cortex</text>
+  <text x="50" y="164" fill="#ffdd00" font-size="9" font-family="Arial" font-weight="bold">beaking</text>
+  <line x1="108" y1="152" x2="160" y2="158" stroke="#ffdd00" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Transverse fracture label -->
+  <text x="272" y="158" fill="#ffffff" font-size="9" font-family="Arial" font-weight="bold">Transverse</text>
+  <text x="272" y="170" fill="#ffffff" font-size="9" font-family="Arial" font-weight="bold">fracture</text>
+
+  <!-- Medial spike label -->
+  <text x="272" y="188" fill="#ffdd00" font-size="9" font-family="Arial">Medial</text>
+  <text x="272" y="200" fill="#ffdd00" font-size="9" font-family="Arial">spike</text>
+  <line x1="270" y1="194" x2="263" y2="162" stroke="#ffdd00" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Bisphosphonate label -->
+  <rect x="10" y="70" width="140" height="36" rx="4" fill="#1e1e1e" stroke="#ff8800" stroke-width="1.5"/>
+  <text x="80" y="86" text-anchor="middle" fill="#ff8800" font-size="9" font-family="Arial" font-weight="bold">Long-term bisphosphonate</text>
+  <text x="80" y="99" text-anchor="middle" fill="#cccccc" font-size="8.5" font-family="Arial">use (&gt;5 years, alendronate)</text>
+  <line x1="150" y1="88" x2="165" y2="140" stroke="#ff8800" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Annotation -->
+  <rect x="10" y="358" width="420" height="72" rx="5" fill="#1e1e1e" stroke="#444" stroke-width="1"/>
+  <text x="20" y="376" fill="#ffdd00" font-size="10" font-family="Arial" font-weight="bold">Atypical Femoral Fracture (AFF) — ASBMR Criteria</text>
+  <text x="20" y="392" fill="#cccccc" font-size="10" font-family="Arial">Subtrochanteric/diaphyseal, transverse, lateral cortex beaking, medial spike</text>
+  <text x="20" y="408" fill="#cccccc" font-size="10" font-family="Arial">Prodromal thigh/groin pain; minimal or no trauma; bilateral in ~30%</text>
+  <text x="20" y="424" fill="#ff4444" font-size="10" font-family="Arial" font-weight="bold">→ Stop bisphosphonate + teriparatide + prophylactic IM nail</text>
+</svg>

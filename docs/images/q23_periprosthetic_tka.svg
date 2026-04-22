@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440" style="background:#111111">
+  <text x="220" y="26" text-anchor="middle" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold">AP Knee — Periprosthetic Fracture After TKA</text>
+
+  <!-- Femoral shaft -->
+  <path d="M185 40 L185 165 L195 172 L195 220 L245 220 L245 172 L255 165 L255 40 Z" fill="#2a2a2a" stroke="#c0c0c0" stroke-width="2"/>
+
+  <!-- TKA Femoral component (implant) -->
+  <path d="M168 220 Q165 200 172 185 L188 178 L195 175 L245 175 L252 178 L268 185 Q275 200 272 220" fill="none" stroke="#e8e8e8" stroke-width="3"/>
+  <path d="M168 220 L168 245 Q168 260 178 268 Q195 278 220 278 Q245 278 262 268 Q272 260 272 245 L272 220" fill="#3a3a3a" stroke="#e0e0e0" stroke-width="2.5"/>
+  <!-- Femoral component shading (implant density) -->
+  <path d="M170 225 L170 245 Q170 256 178 262 Q194 270 220 270 Q246 270 262 262 Q270 256 270 245 L270 225 Z" fill="#505050" stroke="none"/>
+
+  <!-- Tibial component -->
+  <rect x="165" y="298" width="110" height="16" rx="3" fill="#505050" stroke="#e0e0e0" stroke-width="2.5"/>
+  <!-- Tibial stem -->
+  <rect x="212" y="314" width="16" height="50" rx="2" fill="#454545" stroke="#d0d0d0" stroke-width="2"/>
+  <!-- Tibial tray baseplate -->
+  <rect x="165" y="296" width="110" height="6" rx="2" fill="#606060" stroke="#d8d8d8" stroke-width="2"/>
+
+  <!-- Polyethylene liner (lighter gray between components) -->
+  <rect x="167" y="278" width="106" height="20" rx="2" fill="#3a3a3a" stroke="#888" stroke-width="1"/>
+
+  <!-- Proximal tibia bone -->
+  <path d="M155 310 L155 440 L290 440 L290 310 Q290 296 272 292 L165 292 Q148 296 155 310Z" fill="#2a2a2a" stroke="#c0c0c0" stroke-width="2"/>
+
+  <!-- FRACTURE LINE — Supracondylar (above femoral component, Su 2 / Lewis-Rorabeck II) -->
+  <!-- Displaced, comminuted fracture ~5cm above component -->
+  <line x1="182" y1="148" x2="258" y2="142" stroke="#ffffff" stroke-width="3"/>
+  <line x1="183" y1="155" x2="245" y2="150" stroke="#ffffff" stroke-width="2"/>
+  <!-- Displacement gap (displaced fracture) -->
+  <path d="M186 148 Q210 155 240 148" fill="none" stroke="#ff4444" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <!-- Fragment rotation -->
+  <path d="M185 40 L185 145 L195 150 L195 40" fill="#222" stroke="#c0c0c0" stroke-width="2"/>
+  <!-- Slight lateral displacement of distal fragment + component -->
+  <text x="60" y="148" fill="#ffffff" font-size="9" font-family="Arial" font-weight="bold">Fracture line</text>
+  <line x1="138" y1="148" x2="182" y2="148" stroke="#ffffff" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Well-fixed component annotation -->
+  <text x="295" y="215" fill="#44ff44" font-size="9" font-family="Arial">Component</text>
+  <text x="295" y="227" fill="#44ff44" font-size="9" font-family="Arial">well-fixed</text>
+  <line x1="295" y1="232" x2="272" y2="235" stroke="#44ff44" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Su 2 / Rorabeck II label -->
+  <rect x="10" y="130" width="140" height="36" rx="4" fill="#1e1e1e" stroke="#ffdd00" stroke-width="1"/>
+  <text x="80" y="147" text-anchor="middle" fill="#ffdd00" font-size="9" font-family="Arial" font-weight="bold">Su 2 / Rorabeck Type II</text>
+  <text x="80" y="160" text-anchor="middle" fill="#cccccc" font-size="8.5" font-family="Arial">Displaced + stable implant</text>
+
+  <!-- Annotation -->
+  <rect x="10" y="370" width="420" height="62" rx="5" fill="#1e1e1e" stroke="#444" stroke-width="1"/>
+  <text x="20" y="388" fill="#ffdd00" font-size="10" font-family="Arial" font-weight="bold">Periprosthetic Distal Femur Fracture (Rorabeck-Taylor)</text>
+  <text x="20" y="404" fill="#cccccc" font-size="10" font-family="Arial">Type II: Displaced fracture, well-fixed femoral component</text>
+  <text x="20" y="420" fill="#ff4444" font-size="10" font-family="Arial" font-weight="bold">→ ORIF: Lateral locking plate or retrograde IM nail (if box geometry allows)</text>
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440" style="background:#111111">
+  <text x="220" y="26" text-anchor="middle" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold">AP Distal Femur — Lytic Lesion</text>
+
+  <!-- Femoral shaft -->
+  <path d="M180 40 L180 200 Q180 208 188 212 L195 215 L195 350 L245 350 L245 215 L252 212 Q260 208 260 200 L260 40 Z" fill="#2a2a2a" stroke="#c0c0c0" stroke-width="2"/>
+
+  <!-- Medial femoral condyle -->
+  <path d="M152 310 Q148 280 160 260 Q172 245 195 242 L195 350 Q175 352 160 345 Q150 338 152 310Z" fill="#2a2a2a" stroke="#c0c0c0" stroke-width="2"/>
+  <!-- Lateral femoral condyle -->
+  <path d="M288 310 Q292 280 280 260 Q268 245 245 242 L245 350 Q265 352 280 345 Q290 338 288 310Z" fill="#2a2a2a" stroke="#c0c0c0" stroke-width="2"/>
+
+  <!-- GCT LYTIC LESION — epiphyseal/subarticular, expansile, soap-bubble -->
+  <!-- Lesion in medial condyle, extends to subchondral bone (Campanacci II: cortex intact) -->
+  <ellipse cx="195" cy="290" rx="42" ry="52" fill="#1a1a1a" stroke="none"/>
+  <!-- Geographic lysis with sclerotic rim (partial) -->
+  <ellipse cx="195" cy="290" rx="42" ry="52" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <!-- Soap-bubble trabecular pattern -->
+  <ellipse cx="183" cy="278" rx="15" ry="18" fill="none" stroke="#666" stroke-width="1"/>
+  <ellipse cx="205" cy="295" rx="12" ry="15" fill="none" stroke="#666" stroke-width="1"/>
+  <ellipse cx="188" cy="308" rx="10" ry="12" fill="none" stroke="#666" stroke-width="1"/>
+  <ellipse cx="207" cy="272" rx="10" ry="10" fill="none" stroke="#666" stroke-width="1"/>
+
+  <!-- Cortex — INTACT (Campanacci II — thinned but not perforated) -->
+  <!-- Medial cortex of condyle thinned -->
+  <path d="M152 310 Q148 280 160 260 Q165 252 175 247" fill="none" stroke="#c0c0c0" stroke-width="1.5"/>
+  <!-- Note: cortex bulging slightly medially but intact -->
+
+  <!-- Subchondral bone loss (reaches articular surface) -->
+  <line x1="153" y1="330" x2="237" y2="330" stroke="#555" stroke-width="2"/>
+  <line x1="153" y1="325" x2="237" y2="325" stroke="#888" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Campanacci grade label -->
+  <rect x="10" y="238" width="130" height="36" rx="4" fill="#1e1e1e" stroke="#ffdd00" stroke-width="1"/>
+  <text x="75" y="253" text-anchor="middle" fill="#ffdd00" font-size="9" font-family="Arial" font-weight="bold">Campanacci Grade II</text>
+  <text x="75" y="266" text-anchor="middle" fill="#cccccc" font-size="8.5" font-family="Arial">Cortex intact, thinned</text>
+  <line x1="140" y1="256" x2="152" y2="290" stroke="#ffdd00" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Extend-to-epiphysis arrow -->
+  <line x1="310" y1="260" x2="245" y2="280" stroke="#ff4444" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="315" y="255" fill="#ff4444" font-size="9" font-family="Arial">Epiphyseal</text>
+  <text x="318" y="267" fill="#ff4444" font-size="9" font-family="Arial">extension</text>
+
+  <!-- Proximal tibia (for context) -->
+  <path d="M158 370 L158 420 L282 420 L282 370 Q282 358 268 354 Q245 350 220 350 Q195 350 172 354 Q158 358 158 370Z" fill="#2a2a2a" stroke="#c0c0c0" stroke-width="2"/>
+  <line x1="158" y1="370" x2="282" y2="365" stroke="#b0b0b0" stroke-width="1.5"/>
+
+  <!-- Annotation -->
+  <rect x="10" y="358" width="420" height="72" rx="5" fill="#1e1e1e" stroke="#444" stroke-width="1"/>
+  <text x="20" y="375" fill="#ffdd00" font-size="10" font-family="Arial" font-weight="bold">Giant Cell Tumor (GCT) — Distal Femur</text>
+  <text x="20" y="391" fill="#cccccc" font-size="10" font-family="Arial">Expansile lytic epiphyseal lesion, soap-bubble pattern, subarticular</text>
+  <text x="20" y="407" fill="#cccccc" font-size="10" font-family="Arial">Campanacci II: cortex thinned but intact, no soft tissue mass</text>
+  <text x="20" y="423" fill="#ff4444" font-size="10" font-family="Arial" font-weight="bold">→ Extended curettage + cement ± plate fixation</text>
+</svg>

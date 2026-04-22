@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 480" style="background:#111111">
+  <text x="210" y="26" text-anchor="middle" fill="#ffffff" font-size="13" font-family="Arial" font-weight="bold">AP Foot Radiograph — Hallux Valgus</text>
+
+  <!-- 1st metatarsal (deviated medially) -->
+  <path d="M175 60 L165 55 L152 80 L148 130 L150 160 L160 175 L175 180 L188 175 L195 160 L196 130 L192 80 Z" fill="#2e2e2e" stroke="#c8c8c8" stroke-width="2"/>
+
+  <!-- 2nd metatarsal (reference) -->
+  <path d="M210 55 L202 52 L196 75 L194 125 L196 150 L204 160 L213 162 L221 158 L226 148 L226 120 L224 72 Z" fill="#2e2e2e" stroke="#c0c0c0" stroke-width="1.8"/>
+
+  <!-- 1st MTP joint -->
+  <ellipse cx="172" cy="192" rx="20" ry="12" fill="#1e1e1e" stroke="#b0b0b0" stroke-width="1.5"/>
+
+  <!-- Proximal phalanx of hallux — deviated LATERALLY (valgus) -->
+  <path d="M175 204 L193 210 L205 240 L205 270 L198 285 L185 290 L172 288 L163 280 L160 265 L162 235 L170 210 Z" fill="#2e2e2e" stroke="#c8c8c8" stroke-width="2"/>
+  <!-- IP joint + distal phalanx hallux -->
+  <ellipse cx="184" cy="295" rx="16" ry="9" fill="#1e1e1e" stroke="#b0b0b0" stroke-width="1.5"/>
+  <path d="M181 304 L178 320 L176 340 L178 355 L185 360 L192 357 L196 345 L195 325 L191 308 Z" fill="#2e2e2e" stroke="#c0c0c0" stroke-width="1.8"/>
+
+  <!-- Sesamoids -->
+  <ellipse cx="163" cy="196" rx="7" ry="5" fill="#3a3a3a" stroke="#aaa" stroke-width="1"/>
+  <ellipse cx="179" cy="200" rx="7" ry="5" fill="#3a3a3a" stroke="#aaa" stroke-width="1"/>
+
+  <!-- HVA angle measurement (40°) -->
+  <!-- Axis line of 1st MT -->
+  <line x1="172" y1="60" x2="172" y2="185" stroke="#00ddff" stroke-width="1" stroke-dasharray="5,3"/>
+  <!-- Axis line of proximal phalanx -->
+  <line x1="172" y1="210" x2="185" y2="290" stroke="#00ddff" stroke-width="1" stroke-dasharray="5,3"/>
+  <!-- HVA arc -->
+  <path d="M172 215 Q183 213 186 220" fill="none" stroke="#ffdd00" stroke-width="1.5"/>
+  <text x="190" y="225" fill="#ffdd00" font-size="12" font-family="Arial" font-weight="bold">HVA = 40°</text>
+
+  <!-- IMA angle measurement (18°) -->
+  <!-- Axis 2nd MT -->
+  <line x1="212" y1="60" x2="212" y2="155" stroke="#ff8800" stroke-width="1" stroke-dasharray="5,3"/>
+  <path d="M180 100 Q190 105 192 118" fill="none" stroke="#ff8800" stroke-width="1.5"/>
+  <text x="193" y="100" fill="#ff8800" font-size="12" font-family="Arial" font-weight="bold">IMA = 18°</text>
+
+  <!-- 1st ray hypermobility indicator -->
+  <path d="M148 130 Q130 115 128 100" fill="none" stroke="#ff4444" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="60" y="98" fill="#ff4444" font-size="9" font-family="Arial">1st ray</text>
+  <text x="55" y="110" fill="#ff4444" font-size="9" font-family="Arial">hypermobility</text>
+
+  <!-- Annotation -->
+  <rect x="10" y="390" width="400" height="80" rx="5" fill="#1e1e1e" stroke="#444" stroke-width="1"/>
+  <text x="20" y="408" fill="#ffdd00" font-size="10" font-family="Arial" font-weight="bold">Measurements:</text>
+  <text x="20" y="424" fill="#cccccc" font-size="10" font-family="Arial">• HVA = 40° (severe: &gt;40°) • IMA = 18° (severe: &gt;16°)</text>
+  <text x="20" y="440" fill="#cccccc" font-size="10" font-family="Arial">• 1st ray hypermobility present</text>
+  <text x="20" y="456" fill="#ff4444" font-size="10" font-family="Arial" font-weight="bold">→ Lapidus arthrodesis (1st TMT fusion) indicated</text>
+</svg>
