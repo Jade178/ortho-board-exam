@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>schedule.js tests</title>
+  <style>
+    body { font-family: ui-monospace, "Cascadia Code", Menlo, monospace; max-width: 820px; margin: 24px auto; padding: 0 16px; }
+    .pass { color: #15803d; } .fail { color: #b91c1c; font-weight: 700; }
+    h1 { font-size: 1.2rem; } .case { padding: 3px 0; border-bottom: 1px solid #eee; }
+    #summary { font-size: 1.1rem; font-weight: 700; margin: 14px 0; }
+  </style>
+</head>
+<body>
+  <h1>schedule.js — logic tests</h1>
+  <div id="summary"></div>
+  <div id="out"></div>
+
+  <script src="schedule.js"></script>
+  <script>
+    const out = document.getElementById('out');
+    let passed = 0, failed = 0;
+    function ok(name, cond, detail) {
+      const div = document.createElement('div');
+      div.className = 'case ' + (cond ? 'pass' : 'fail');
+      div.textContent = (cond ? '✓ ' : '✗ ') + name + (cond ? '' : '  —  ' + (detail || ''));
+      out.appendChild(div);
+      cond ? passed++ : failed++;
+    }
+
+    // deterministic RNG for reproducibility
+    function rngFrom(seed) { let s = seed; return () => ((s = Math.imul(48271, s) % 2147483647) / 2147483647); }
+
+    // build roster (Ake absent Jul-Aug)
+    const names = ['Pong','Aud','Gere','Term','Noom','Modz','Joe','Parn','Nick','Ake','June','Boom','Jade','Iaim'];
+    const roster = names.map((n, i) => ({
+      id: n.toLowerCase(), name: n, rank: i, isAdmin: false,
+      absentMonths: n === 'Ake' ? ['2026-07', '2026-08'] : []
+    }));
+
+    // ── quota: July 2026 ──
+    const month = '2026-07';
+    const nights = S().daysInMonth(month);
+    function S() { return window.Schedule; }
+    ok('July has 31 days', nights === 31, 'got ' + nights);
+
+    const q = S().computeQuotas(roster, month, nights);
+    ok('13 active doctors (Ake excluded)', Object.keys(q).length === 13, 'got ' + Object.keys(q).length);
+    ok('quota sums to nights', Object.values(q).reduce((a, b) => a + b, 0) === 31);
+    const threes = Object.keys(q).filter(id => q[id] === 3);
+    ok('exactly 5 doctors get 3 nights', threes.length === 5, 'got ' + threes.length + ': ' + threes);
+    const expected3 = ['nick', 'june', 'boom', 'jade', 'iaim'];
+    ok('the 5 most-junior active doctors carry the extra night',
+       expected3.every(id => q[id] === 3), JSON.stringify(q));
+    ok('Pong (most senior) gets the base 2', q.pong === 2);
+
+    // ── ranked picks: priority conflicts ──
+    const pc1 = S().findPriorityConflicts({ pong: { picks: [7] }, aud: { picks: [7] }, gere: { picks: [9] } }, 1);
+    ok('1st-priority conflict on day 7', pc1[7] && pc1[7].length === 2);
+    ok('no 1st-priority conflict on day 9', !pc1[9]);
+    const pc2 = S().findPriorityConflicts({ pong: { picks: [7, 12] }, aud: { picks: [3, 12] } }, 2);
+    ok('2nd-priority conflict detected on day 12', pc2[12] && pc2[12].length === 2);
+
+    // ── staged auto-fill by priority ──
+    const claims2 = {
+      pong: { picks: [5, 6, 7] },
+      aud:  { picks: [5, 8] },          // 1st-priority conflict with Pong on day 5
+      gere: { picks: [9], blackout: [] },
+      iaim: { picks: [10] },
+    };
+    // Stage 1: assign 1st priorities; day 5 is a conflict → skipped
+    const s1 = S().autoFillPriority({ doctors: roster, month, claims: claims2, assignments: {}, level: 1 });
+    ok('stage-1 skips the conflicting day 5', !s1.added['2026-07-05']);
+    ok('stage-1 flags day 5 as a conflict', !!s1.conflicts[5]);
+    ok('stage-1 assigns Gere\'s 1st pick (day 9)', s1.added['2026-07-09'] === 'gere');
+    ok('stage-1 assigns Iaim\'s 1st pick (day 10)', s1.added['2026-07-10'] === 'iaim');
+
+    // After admin resolves day 5 → Pong, stage 2 fills 2nd priorities
+    const assignedAfter = { '2026-07-05': 'pong', '2026-07-09': 'gere', '2026-07-10': 'iaim' };
+    const s2 = S().autoFillPriority({ doctors: roster, month, claims: claims2, assignments: assignedAfter, level: 2 });
+    ok('stage-2 assigns Aud 2nd pick (day 8)', s2.added['2026-07-08'] === 'aud');
+    ok('stage-2 does not touch already-taken days', !s2.added['2026-07-05']);
+
+    // ── fairness fill (blackout-only claims, fixed seeds) ──
+    const r = S().autoFill({ doctors: roster, month, holidays: ['2026-07-28'],
+      claims: { iaim: { blackout: [1, 2, 3] } }, fixed: { '2026-07-05': 'pong' }, rng: rngFrom(7) });
+    ok('fairness fill completes all 31 nights', Object.keys(r.assignments).length === 31);
+    ok('fairness fill keeps the fixed Pong day 5', r.assignments['2026-07-05'] === 'pong');
+    ok('fairness counts equal quota', Object.keys(q).every(id => r.counts[id] === q[id]), JSON.stringify(r.counts));
+    ok('respected Iaim blackout (no Iaim days 1-3)', ['01','02','03'].every(d => r.assignments['2026-07-' + d] !== 'iaim'));
+    ok('absent Ake never assigned', !Object.values(r.assignments).includes('ake'));
+
+    // ── September: 14 active ──
+    const sep = '2026-09';
+    const qs = S().computeQuotas(roster, sep, S().daysInMonth(sep));
+    ok('September has 14 active doctors', Object.keys(qs).length === 14, 'got ' + Object.keys(qs).length);
+    ok('September quota sums to 30', Object.values(qs).reduce((a, b) => a + b, 0) === 30);
+
+    document.getElementById('summary').innerHTML =
+      (failed === 0 ? '<span class="pass">ALL ' + passed + ' PASSED</span>'
+                    : '<span class="fail">' + failed + ' FAILED</span>, ' + passed + ' passed');
+  </script>
+</body>
+</html>

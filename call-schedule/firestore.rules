@@ -1,0 +1,62 @@
+rules_version = '2';
+
+/*
+ * On-call schedule security rules.
+ *
+ * Firestore rules can only get() a document by a KNOWN path, not query by a
+ * field. So we keep a small mapping collection:
+ *
+ *   members/{uid} = { docId: <roster id>, isAdmin: <bool> }
+ *
+ * written when a doctor links their Google account (self-bind). This lets the
+ * rules answer "who is this caller / are they admin?" with a single get().
+ *
+ * Model:
+ *   • Any signed-in member can READ everything.
+ *   • A doctor may write only their OWN claim (claims/{docId} where docId == their roster id).
+ *   • Admins may write assignments, schedule metadata, and the roster.
+ *   • Self-binding cannot grant admin (isAdmin must be false on self-create);
+ *     promote admins from the Firebase console or via an existing admin.
+ *
+ * BOOTSTRAP: after the first admin (e.g. Jade) signs in once, manually set
+ * members/<their-uid>.isAdmin = true in the console. They can then promote others.
+ */
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() { return request.auth != null; }
+    function memberPath() { return /databases/$(database)/documents/members/$(request.auth.uid); }
+    function isMember()  { return signedIn() && exists(memberPath()); }
+    function member()    { return get(memberPath()).data; }
+    function isAdmin()   { return isMember() && member().isAdmin == true; }
+
+    // membership map: caller may create only their own, never self-granting admin
+    match /members/{uid} {
+      allow read:   if signedIn();
+      allow create: if signedIn() && uid == request.auth.uid
+                    && request.resource.data.isAdmin == false;
+      allow update, delete: if isAdmin() || uid == request.auth.uid;
+    }
+
+    // roster — read for all members, write for admins
+    match /doctors/{docId} {
+      allow read:  if signedIn();
+      allow write: if isAdmin();
+    }
+
+    match /schedules/{month} {
+      allow read:  if signedIn();
+      allow write: if isAdmin();                 // holidays, quotas, status, deadline
+
+      match /claims/{docId} {
+        allow read:  if signedIn();
+        allow write: if isAdmin() || (isMember() && member().docId == docId);
+      }
+
+      match /assignments/{dateKey} {
+        allow read:  if signedIn();
+        allow write: if isAdmin();
+      }
+    }
+  }
+}

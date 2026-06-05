@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Ortho On-Call — August 2026</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>🌙</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="page-nav">
+    <span class="lbl">Month pages</span>
+    <a href="index.html">Main (July &amp; default)</a>
+    <a href="august.html" class="active">August 2026</a>
+  </nav>
+  <div id="app"></div>
+
+  <!-- This page opens on August 2026. The header dropdown still switches months. -->
+  <script>window.INITIAL_MONTH = '2026-08';</script>
+
+  <!-- Firebase compat SDKs (used only when firebase-config.js sets a config). -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js" onerror="console.info('No firebase-config.js — running in demo (mock) mode.')"></script>
+
+  <script src="roster.js"></script>
+  <script src="schedule.js"></script>
+  <script src="store.js"></script>
+  <script src="calendar.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
